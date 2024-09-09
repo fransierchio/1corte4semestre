@@ -1,30 +1,27 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-    int array[]={3,4,2,1,5,1};
-    int i,j,aux,min;
+    vector<int> array={3,4,2,1,5,1};
+    int tam=array.size();
+    int i,j,min;
 
-    for (i=0; i<6;i++)
+    for (i=0; i<tam;i++)
     {
         min=i;
-        for (j=i+1; j<6; j++)
+        for (j=i+1; j<tam; j++)
         {
             if(array[min]>array[j])
             {
                 min=j;
             }
         }
-        aux = array[i];
-        array[i]=array[min];
-        array[min]=aux;
+        swap(array[i],array[min]);
     }
 
-    for(i=0;i<6;i++)
-    {
-        cout<<array[i]<<endl;
-    }
+    for (int cont : array) {cout<<cont<<endl;}
 
 }
