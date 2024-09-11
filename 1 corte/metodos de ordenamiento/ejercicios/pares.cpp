@@ -6,19 +6,19 @@
 using namespace std;
 
 void random(vector<int>&array);
-void imprimir(vector<int>&array, int mitad);
-void par(vector<int>&array, int mitad);
-void min(vector<int>&array, int mitad);
+void imprimir(vector<int>&array);
+void par(vector<int>&array, float mitad);
+void min(vector<int>&array, float mitad);
 
 int main()
 {
     srand(time(NULL));
     int size=rand()%10+2;
-   vector<int> array(size);
-    int mitad = size/2;
+    vector<int> array(size);
+    float mitad = size/2;
 
     random(array);
-    imprimir(array, mitad);
+    imprimir(array);
     par(array,mitad);
     min(array,mitad);
 
@@ -37,7 +37,7 @@ void random(vector<int>&array)
     }
 }
 
-void imprimir(vector<int>&array,int mitad)
+void imprimir(vector<int>&array)
 {
     int pos=0;
     for(int show:array)
@@ -47,7 +47,7 @@ void imprimir(vector<int>&array,int mitad)
     }
 }
 
-void par(vector<int>&array, int mitad)
+void par(vector<int>&array, float mitad)
 {
     int suma=0;
     for(int i=0;i<array.size();i++)
@@ -64,12 +64,12 @@ void par(vector<int>&array, int mitad)
     cout<<"La suma de los numeros pares desde la mitad hasta el final del vector es de: "<<suma<<endl;
 }
 
-void min(vector<int>&array, int mitad)
+void min(vector<int>&array, float mitad)
 {
     int menor=array[0];
     for(int i=0;i<array.size();i++)
     {
-        if(i<=floor(mitad))
+        if(i<=mitad-1)
         {
             if(menor>array[i])
             {
