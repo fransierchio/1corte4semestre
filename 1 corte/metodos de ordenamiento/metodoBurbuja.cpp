@@ -6,7 +6,7 @@ using namespace std;
 int main ()
 {
 
-    int array[] = {3,2,8,4,1,4,9};
+    int array[] = {3,2,8,4,1,4,9,657,567,56,56,565,45,4,5,4};
     int i,j,aux;
     int tam= (sizeof(array)/sizeof(array[0]))-1;
 
@@ -21,7 +21,7 @@ int main ()
         }
     }
 
-    for (i = 0; i<7;i++)
+    for (i = 0; i<tam;i++)
     {
         cout<<array[i]<<endl;
     }
