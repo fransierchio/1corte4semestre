@@ -56,7 +56,8 @@ void interfaz(int **lanza, int filas, int columnas)
         cout << "4. Tabla de frecuencia" << endl;
         cout << "Escribe el numero de la opcion que desees elegir: ";
         cin>>opc;
-
+        cin.clear();
+        cin.ignore();
         //menu de opciones
         switch (opc)
         {
