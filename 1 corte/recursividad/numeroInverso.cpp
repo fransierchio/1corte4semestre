@@ -4,13 +4,13 @@ using namespace std;
 
 void inverso(int array)
 {
-    if (array<10)
+    if (array<n) 
     {
         cout<<array;
         return;
     }
     cout<<array%10;
-    inverso(array/10);
+    inverso(array/10); 
 }
 
 int main()

@@ -32,3 +32,17 @@ int minimo(int a, int b)
 {
     return (a*b)/maximo(a,b);
 }
+
+for (int i = 0; i < n; i++)
+{
+    j=1;
+    while (j<n)
+    {
+        j=j*2;
+        j++
+    }
+    
+}
+
+ 
+ 
